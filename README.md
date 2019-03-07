@@ -1,2 +1,2 @@
 # MamamSehat
-MamamSehat untuk kesehatan kita!
+MamamSehat untuk kesehatan kita semua!
