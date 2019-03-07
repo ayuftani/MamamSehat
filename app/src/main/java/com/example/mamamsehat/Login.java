@@ -89,7 +89,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                 , Password.getText().toString().trim())) {
 
 
-            Intent accountsIntent = new Intent(activity, UsersListActivity.class);
+            Intent accountsIntent = new Intent(activity, tentangkami.class);
             accountsIntent.putExtra("EMAIL", Email.getText().toString().trim());
             emptyInputEditText();
             startActivity(accountsIntent);
@@ -100,9 +100,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         }
     }
 
-    /**
-     * This method is to empty all input edit text
-     */
     private void emptyInputEditText() {
         Email.setText(null);
         Password.setText(null);
