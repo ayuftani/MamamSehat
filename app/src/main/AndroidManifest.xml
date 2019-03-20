@@ -8,10 +8,11 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".chatroom"></activity>
         <activity
             android:name=".layanan"
             android:label="@string/title_activity_layanan"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".OrderActivity"
             android:label="@string/title_activity_order"
@@ -38,19 +39,15 @@
         <activity
             android:name="activities.UsersListActivity"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".artikel"
-            android:label="Artikel" />
-        <!--<activity-->
-        -->
+            android:label="Artikel" /> <!-- <activity -->
         <activity
             android:name=".kalkulasi"
-            android:label="Kalkulasi"></activity>
+            android:label="Kalkulasi" />
         <activity
             android:name=".Menu"
-            android:label="Menu"></activity>
+            android:label="Menu" />
     </application>
-
 
 </manifest>
