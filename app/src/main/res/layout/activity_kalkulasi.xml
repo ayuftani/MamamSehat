@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Pembeli :  "
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/namapelanggan"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Produk :  "
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/namabarang"
+                android:text="" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jumlah Beli:  "
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/jumlahbeli"
+                android:text=""
+                android:inputType="number"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Harga : Rp "
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/harga"
+                android:text=""
+                android:inputType="number"
+                android:layout_marginBottom="8dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Uang Bayar: Rp  "
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/uangbayar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:text="" />
+        </LinearLayout>
+        <Button
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tombol1"
+            android:text="PROSES"
+            android:background="@color/colorAccent"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:layout_marginBottom="8dp" />
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Belanja "
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/totalbelanja"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:layout_marginBottom="8dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Uang Kembali "
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/uangkembali"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:layout_marginBottom="8dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bonus"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/bonus"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:layout_marginBottom="8dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Keterangan "
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/keterangan"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:layout_marginBottom="8dp"/>
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/tombol2"
+                android:text="RESET DATA"
+                android:background="@color/colorAccent"
+                android:textStyle="bold"
+                android:textColor="#ffffFF"/>
+            <Button
+                android:layout_width="200dp"
+                android:layout_marginLeft="20dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/tombol3"
+                android:text="KELUAR"
+                android:background="@color/colorAccent"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
