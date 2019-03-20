@@ -38,16 +38,18 @@
         <activity
             android:name="activities.UsersListActivity"
             android:screenOrientation="portrait" />
-    </intent-filter>
-</activity>
-<activity android:name=".Artikel"
-android:label="Artikel"/>
-<activity android:name=".ContactUs"
-android:label="Contact Us"/>
-<activity android:name=".Kalkulasi"
-android:label="Kalkulasi"></activity>
-<activity android:name=".Menu"
-android:label="Menu"></activity>
+
+        <activity
+            android:name=".artikel"
+            android:label="Artikel" />
+        <!--<activity-->
+        -->
+        <activity
+            android:name=".kalkulasi"
+            android:label="Kalkulasi"></activity>
+        <activity
+            android:name=".Menu"
+            android:label="Menu"></activity>
     </application>
 
 
