@@ -89,7 +89,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                 , Password.getText().toString().trim())) {
 
 
-            Intent accountsIntent = new Intent(activity, tentangkami.class);
+            Intent accountsIntent = new Intent(activity, beranda.class);
             accountsIntent.putExtra("EMAIL", Email.getText().toString().trim());
             emptyInputEditText();
             startActivity(accountsIntent);
