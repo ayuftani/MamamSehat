@@ -8,13 +8,14 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Home"
+            android:theme="@style/AppTheme"/>
         <activity android:name=".DetailProduk" />
         <activity android:name=".forum" />
         <activity android:name=".Artikel" />
         <activity
             android:name=".OrderActivity"
-            android:label="@string/title_activity_order"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="@string/title_activity_order" />
         <activity android:name=".ContactUs" />
         <activity
             android:name=".SplashActivity"
@@ -37,8 +38,7 @@
         <activity
             android:name=".kalkulasi"
             android:label="Kalkulasi" />
-        <activity
-            android:name=".beranda" />
+
     </application>
 
 </manifest>

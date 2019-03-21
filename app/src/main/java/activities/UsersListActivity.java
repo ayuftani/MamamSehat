@@ -1,5 +1,6 @@
 package activities;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,8 +9,10 @@ import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
 import com.example.mamamsehat.R;
+import com.example.mamamsehat.Register;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -77,4 +80,11 @@ public class UsersListActivity extends AppCompatActivity {
             }
         }.execute();
     }
+
+    public void ok(View view) {
+        Intent intentok = new Intent(getApplicationContext(), com.example.mamamsehat.Home.class);
+        startActivity(intentok);
+    }
 }
+
+

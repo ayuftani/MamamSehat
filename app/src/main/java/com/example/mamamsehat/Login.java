@@ -97,10 +97,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
         } else {
             Toast.makeText(getApplicationContext(), "Email/Password Salah", Toast.LENGTH_LONG).show();
-            Intent accountsIntent = new Intent(activity, beranda.class);
-            accountsIntent.putExtra("EMAIL", Email.getText().toString().trim());
-            emptyInputEditText();
-            startActivity(accountsIntent);
+
 
         }
     }

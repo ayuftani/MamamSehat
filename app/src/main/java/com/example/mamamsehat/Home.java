@@ -1,22 +1,18 @@
 package com.example.mamamsehat;
 
 import android.content.Intent;
-import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Toast;
-public class beranda extends AppCompatActivity {
+
+public class Home extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_beranda);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
     }
 
 
@@ -30,27 +26,27 @@ public class beranda extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_beranda:
-                Intent intent = new Intent(beranda.this, beranda.class);
+                Intent intent = new Intent(Home.this, beranda.class);
                 startActivity(intent);
                 return true;
             case R.id.action_produk:
-                Intent intent1 = new Intent(beranda.this, OrderActivity.class);
+                Intent intent1 = new Intent(Home.this, OrderActivity.class);
                 startActivity(intent1);
                 return true;
             case R.id.action_artikel:
-                Intent intent2 = new Intent(beranda.this, Artikel.class);
+                Intent intent2 = new Intent(Home.this, Artikel.class);
                 startActivity(intent2);
                 return true;
             case R.id.action_forum:
-                Intent intent3 = new Intent(beranda.this, forum.class);
+                Intent intent3 = new Intent(Home.this, forum.class);
                 startActivity(intent3);
                 return true;
             case R.id.action_contact:
-                Intent intent4 = new Intent(beranda.this, ContactUs.class);
+                Intent intent4 = new Intent(Home.this, ContactUs.class);
                 startActivity(intent4);
                 return true;
             case R.id.action_logout:
-                Intent intent5 = new Intent(beranda.this, Login.class);
+                Intent intent5 = new Intent(Home.this, Login.class);
                 startActivity(intent5);
                 return true;
             default:
