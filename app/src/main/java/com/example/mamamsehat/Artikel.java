@@ -1,8 +1,9 @@
 package com.example.mamamsehat;
 
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class artikel extends MainActivity {
+public class Artikel extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

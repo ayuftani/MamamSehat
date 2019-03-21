@@ -46,7 +46,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         Password = (EditText) findViewById(R.id.Password);
         btnLogin = (Button) findViewById(R.id.btnlogin);
         createone = (TextView) findViewById(R.id.cretaeone);
-}
+    }
 
     private void initListeners() {
         btnLogin.setOnClickListener(this);
@@ -89,7 +89,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                 , Password.getText().toString().trim())) {
 
 
-            Intent accountsIntent = new Intent(activity, beranda.class);
+            Intent accountsIntent = new Intent(activity, activities.UsersListActivity.class);
             accountsIntent.putExtra("EMAIL", Email.getText().toString().trim());
             emptyInputEditText();
             startActivity(accountsIntent);
@@ -97,6 +97,11 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
         } else {
             Toast.makeText(getApplicationContext(), "Email/Password Salah", Toast.LENGTH_LONG).show();
+            Intent accountsIntent = new Intent(activity, beranda.class);
+            accountsIntent.putExtra("EMAIL", Email.getText().toString().trim());
+            emptyInputEditText();
+            startActivity(accountsIntent);
+
         }
     }
 

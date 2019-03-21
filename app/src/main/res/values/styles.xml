@@ -18,4 +18,11 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="ProdukDetailText" parent="TextAppearance.AppCompat.Subhead"/>
+
+    <style name="ProdukTitle" parent="TextAppearance.AppCompat.Headline"/>
+
+    <style name="ProdukDetailTitle" parent="TextAppearance.AppCompat.Headline"/>
 </resources>

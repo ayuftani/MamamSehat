@@ -17,13 +17,11 @@
     <string name="error_email_exists">Email Already Exists</string>
     <string name="error_password_match">Password Does Not Matches</string>
     <string name="error_valid_email_password">Wrong Email or Password</string>
-    <string name="action_settings">Settings</string>
     <string name="text_hello">Hello</string>
     <string name="text_title">MAMAM SEHAT</string>
     <string name="mamam_sehat_perusahaan_yang_bergerak_di_bidang_kuliner_dengan_produk_makanan_sehat_merupakan_gagasan_ide_model_bisnis_pola_hidup_sehat_yang_dikemas_secara_menarik_oleh_tim_mamamsehat">mamam_sehat_perusahaan_yang_bergerak_di_bidang_kuliner_dengan_produk_makanan_sehat_merupakan_gagasan_ide_model_bisnis_pola_hidup_sehat_yang_dikemas_secara_menarik_oleh_tim_mamamsehat</string>
     <string name="tentang_kami">Tentang Kami</string>
     <string name="title_activity_order">OrderActivity</string>
-    <string name="action_settings">Settings</string>
     <string name="intro_text">Menu Makanan</string>
     <string name="donuts">Mamam Sehat1
         Rp40.000,00</string>
@@ -35,15 +33,51 @@
     <string name="ice_cream_order_message">You ordered Mamam Sehat2.</string>
     <string name="froyo_order_message">You ordered Mamam Sehat3.</string>
     <string name="change_dessert">Change dessert</string>
-    <string name="app_name">Scrolling Text</string>
     <string name="article_title">Apa itu Hidup Sehat</string>
     <string name="article_subtitle">Manfaat Pola Hidup Sehat Bagi Kesehatan Masyarakat Indonesia</string>
-    <string name="article_text">Pola hidup sehat berarti kegiatan yang dilakukan secara terus menerus dan teratur menjadi kebiasaan dalam gaya hidup dengan memperhatikan hal-hal yang mempengaruhi kesehatan tubuh, baik dari konsumsi makanan dan minuman dan olah raga juga istirahat yang cukup. Pelaku pola hidup sehat akan selalu berusaha untuk setiap gerak gerik dalam hidupnya untuk selalu teratur dan seimbang dalam menjaga kesehatan tubuhnya.
-\n\n
-Polah hidup yang sehat memang banyak sekali faktor yang menjadi pendukungnya selain dari diri sendiri yang harus melakukan aktivitas terbaik dan berfikir positif juga memerlukan asupan makanan yang memiliki gizi yang seimbang. Olahraga juga salah satu faktor penting untuk memiliki tubuh yang sehat dan segar bugar bila dilakukan secara teratur baik waktu dan tata caranya, olahraga tidak harus yang berat-berat namun bisa saja yang ringan-ringan seperti jalan kaki atau bisa juga bersepeda dilingkungan tempat tinggal. Ini salah satu olahraga yang murah meriah dan memiliki manfaat yang baik juga bisa menimbulkan kebahagian selain badan segar bugar.
-\n\n
-Ilmu Pengetahuan sebenarnya menjadi hal yang sangat penting untuk memulai pola hidup sehat, hal ini karena dengan pengetahuan tersebut maka akan mengetahui tata cara memulai dan menerapkan pola hidup yang sehat dengan hasil yang maksimal dalam jangka yang panjang. Untuk itu carilah sebanyak-banyaknya referensi bagaimana cara hidup sehat disertai gaya hidup yang bagaimana untuk hidup lebih indah dan bahagia, sehingga bisa memanajemen dengan baik pikiran dan hati secara bijaksana dengan manfaat mampu memberikan ketenangan dalam hidup.
-\n\n
-</string>
-    <string name="title_activity_layanan">layanan</string>
+
+
+    <string name="action_beranda">Beranda</string>
+    <string name="action_produk">Produk</string>
+    <string name="action_artikel">Artikel</string>
+    <string name="action_forum">Forum</string>
+    <string name="action_contact">Hubungi Kami</string>
+    <string name="action_logout">Logout</string>
+
+    <string name="alasan">Adapun cara hidup sehat diantaranya: \n
+        Berolahraga \n
+        Menjaga Pola Makan \n
+        Kurangi Asupan garam dan gula \n
+        Minum Air putih dengan teratur \n
+        Menciptakan lingkungan yang sehat \n
+        Istirahat yang cukup</string>
+
+    <string name="title_placeholder">Title</string>
+    <string name="news_placeholder">News</string>
+    <string name="sports_info_placeholder">Here is some news</string>
+    <string name="subtitle_detail_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ultrices congue rutrum. Phasellus elementum ipsum ac convallis aliquam. Suspendisse eleifend eros a enim faucibus mollis. Nunc placerat, est vitae vestibulum blandit, dolor diam fringilla tellus, eu euismod mauris neque at neque.</string>
+
+    <string-array name="Produk_titles">
+        <item>Diet Ketogenik</item>
+        <item>Diet Paleo</item>
+        <item>Diet Mayo</item>
+        <item>Diet Vegetarian</item>
+        <item>Diet Mediteranian</item>
+    </string-array>
+
+    <string-array name="Produk_info">
+        <item>Tentang Diet Ketogenik!</item>
+        <item>Tentang Diet Paleo!</item>
+        <item>Tentang Diet Mayo!</item>
+        <item>Tentang Diet Vegetarian!</item>
+        <item>Tentang Diet Mediteranian!</item>
+    </string-array>
+
+    <array name="Produk_images">
+        <item>@drawable/keto</item>
+        <item>@drawable/paleo</item>
+        <item>@drawable/mayo</item>
+        <item>@drawable/vegetarian</item>
+        <item>@drawable/mediteranian</item>
+    </array>
 </resources>
