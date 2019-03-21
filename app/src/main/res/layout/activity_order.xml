@@ -23,8 +23,8 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_margin="16dp"
-        android:src="@drawable/ic_reset"
-        android:tint="@android:color/white"
+        android:src="@drawable/ic_refresh"
+        android:tint="@android:color/black"
         android:onClick="resetProduk"/>
 
 </RelativeLayout>

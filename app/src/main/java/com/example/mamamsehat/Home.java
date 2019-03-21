@@ -12,7 +12,7 @@ public class Home extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_beranda);
+        setContentView(R.layout.activity_home);
     }
 
 
@@ -26,7 +26,7 @@ public class Home extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_beranda:
-                Intent intent = new Intent(Home.this, beranda.class);
+                Intent intent = new Intent(Home.this, Home.class);
                 startActivity(intent);
                 return true;
             case R.id.action_produk:
