@@ -1,5 +1,6 @@
 package com.example.mamamsehat;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -115,6 +116,8 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
             // Snack Bar to show success message that record saved successfully
             Toast.makeText(getApplicationContext(), "YOUR REGISTRATION IS SUCCESSFULLY", Toast.LENGTH_LONG).show();
             emptyInputEditText();
+            Intent intent5 = new Intent(Register.this, Login.class);
+            startActivity(intent5);
 
 
         } else {
