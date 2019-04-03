@@ -1,109 +1,85 @@
 package com.example.mamamsehat;
-
+import android.app.ProgressDialog;
 import android.content.Intent;
-import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import activities.UsersListActivity;
-import helpers.InputValidation;
-import sql.DatabaseHelper;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
-public class Login extends AppCompatActivity implements View.OnClickListener {
-    private final AppCompatActivity activity = Login.this;
+public class Login extends AppCompatActivity {
 
-    private TextView JudulEmail;
-    private TextView JudulPassword;
+    private EditText textemail;
+    private EditText textpassword;
+    private Button login;
+    private TextView textregis;
 
-    private EditText Email;
-    private EditText Password;
-
-    private Button btnLogin;
-    private TextView createone;
-
-    private InputValidation inputValidation;
-    private DatabaseHelper databaseHelper;
+    private FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        getSupportActionBar().hide();
 
-        initVIews();
-        initListeners();
-        initObjects();
-    }
+        firebaseAuth = FirebaseAuth.getInstance();
 
-    private void initVIews(){
-        JudulEmail = (TextView) findViewById(R.id.JudulEmail);
-        JudulPassword = (TextView) findViewById(R.id.JudulPassword);
-        Email = (EditText) findViewById(R.id.Email);
-        Password = (EditText) findViewById(R.id.Password);
-        btnLogin = (Button) findViewById(R.id.btnlogin);
-        createone = (TextView) findViewById(R.id.cretaeone);
-    }
+        textemail = findViewById(R.id.email);
+        textpassword = findViewById(R.id.password);
+        textregis = findViewById(R.id.regis);
+        login = findViewById(R.id.login);
 
-    private void initListeners() {
-        btnLogin.setOnClickListener(this);
-        createone.setOnClickListener(this);
-    }
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String email = textemail.getText().toString();
+                final String password = textpassword.getText().toString();
 
-    private void initObjects() {
-        databaseHelper = new DatabaseHelper(activity);
-        inputValidation = new InputValidation(activity);
+                if (TextUtils.isEmpty(email)) {
+                    Toast.makeText(getApplicationContext(), "Enter email address!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
-    }
+                if (TextUtils.isEmpty(password)) {
+                    Toast.makeText(getApplicationContext(), "Enter password!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.btnlogin:
-                verifyFromSQLite();
-                break;
-            case R.id.cretaeone:
-                // Navigate to RegisterActivity
-                Intent intentRegister = new Intent(getApplicationContext(), Register.class);
-                startActivity(intentRegister);
-                break;
-        }
-    }
-
-
-    private void verifyFromSQLite() {
-        if (!inputValidation.isInputEditTextFilled(Email, JudulEmail, getString(R.string.error_message_email))) {
-            return;
-        }
-        if (!inputValidation.isInputEditTextEmail(Email, JudulEmail, getString(R.string.error_message_email))) {
-            return;
-        }
-        if (!inputValidation.isInputEditTextFilled(Password, JudulPassword, getString(R.string.error_message_email))) {
-            return;
-        }
-
-        if (databaseHelper.checkUser(Email.getText().toString().trim()
-                , Password.getText().toString().trim())) {
+                //authenticate user
+                firebaseAuth.signInWithEmailAndPassword(email, password)
+                        .addOnCompleteListener(Login.this, new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if (!task.isSuccessful()) {
+                                    if (password.length() < 6) {
+                                        textpassword.setError(getString(R.string.min_pass));
+                                    } else {
+                                        Toast.makeText(Login.this, getString(R.string.auth_failed), Toast.LENGTH_LONG).show();
+                                    }
+                                } else {
+                                    Intent intent = new Intent(Login.this, Home.class);
+                                    startActivity(intent);
+                                    finish();
+                                }
+                            }
+                        });
+            }
+        });
 
 
-            Intent accountsIntent = new Intent(activity, activities.UsersListActivity.class);
-            accountsIntent.putExtra("EMAIL", Email.getText().toString().trim());
-            emptyInputEditText();
-            startActivity(accountsIntent);
-
-
-        } else {
-            Toast.makeText(getApplicationContext(), "Email/Password Salah", Toast.LENGTH_LONG).show();
-
-
-        }
-    }
-
-    private void emptyInputEditText() {
-        Email.setText(null);
-        Password.setText(null);
+        textregis.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Login.this, Register.class));
+            }
+        });
     }
 }

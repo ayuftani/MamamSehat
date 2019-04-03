@@ -5,15 +5,40 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 public class Artikel extends AppCompatActivity {
+
+    WebView webayu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_artikel);
+
+        webayu = findViewById(R.id.webayu);
+        String url = "https://www.dietsehatcantik.com/";
+        webayu.getSettings().setJavaScriptEnabled(true);
+        webayu.setFocusable(true);
+        webayu.getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);
+        webayu.getSettings().setDomStorageEnabled(true);
+        webayu.getSettings().setRenderPriority(WebSettings.RenderPriority.HIGH);
+        webayu.getSettings().setDatabaseEnabled(true);
+        webayu.getSettings().setAppCacheEnabled(true);
+        webayu.loadUrl(url);
+        webayu.setWebViewClient(new WebViewClient());
     }
 
+    @Override
+    public void onBackPressed() {
+        if (webayu.canGoBack()){
+            webayu.goBack();
+        } else {
+            super.onBackPressed();
+        }
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

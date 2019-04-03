@@ -1,134 +1,104 @@
 package com.example.mamamsehat;
 
+
+import android.app.ProgressDialog;
 import android.content.Intent;
-import android.os.Bundle;
-import android.support.annotation.Nullable;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import helpers.InputValidation;
-import model.User;
-import sql.DatabaseHelper;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
+import org.w3c.dom.Text;
 
-public class Register extends AppCompatActivity implements View.OnClickListener {
-    private final AppCompatActivity activity = Register.this;
+public class Register extends AppCompatActivity {
 
-    private TextView JudulNama;
-    private TextView jdlEmail;
-    private TextView jdlPassword;
-    private TextView jdlComfirm;
+    private Button buttonRegister;
+    private EditText editTextNama;
+    private EditText editTextEmail;
+    private EditText editTextPassword;
+    private TextView textViewLogin;
 
-    private EditText nama;
-    private EditText Email;
-    private EditText Pass;
-    private EditText ComformPassword;
-
-    private Button register;
-    private TextView login;
-
-    private InputValidation inputValidation;
-    private DatabaseHelper databaseHelper;
-    private User user;
+    private ProgressDialog progressDialog;
+    private FirebaseAuth firebaseAuth;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        getSupportActionBar().hide();
 
-        initViews();
-        initListeners();
-        initObjects();
-    }
+        firebaseAuth = FirebaseAuth.getInstance();
+        progressDialog = new ProgressDialog(this);
 
-    private void initViews() {
+        buttonRegister = findViewById(R.id.regist);
+        editTextNama = findViewById(R.id.nama);
+        editTextEmail = findViewById(R.id.email);
+        editTextPassword = findViewById(R.id.password);
+        textViewLogin = findViewById(R.id.login);
 
-        JudulNama = (TextView) findViewById(R.id.JudulNama);
-        jdlEmail = (TextView) findViewById(R.id.jdlEmail);
-        jdlPassword = (TextView) findViewById(R.id.jdlPassword);
-        jdlComfirm = (TextView) findViewById(R.id.jdlComfirm);
+        buttonRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String name = editTextNama.getText().toString().trim();
+                String email = editTextEmail.getText().toString().trim();
+                String password = editTextPassword.getText().toString().trim();
 
-        nama = (EditText) findViewById(R.id.nama);
-        Email = (EditText) findViewById(R.id.Email);
-        Pass = (EditText) findViewById(R.id.Pass);
-        ComformPassword = (EditText) findViewById(R.id.ComfirmPassword);
+                if (TextUtils.isEmpty(name)) {
+                    Toast.makeText(getApplicationContext(), "Enter your fullname!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
-        register = (Button) findViewById(R.id.register);
-        login = (TextView) findViewById(R.id.login);
-    }
+                if (TextUtils.isEmpty(email)) {
+                    Toast.makeText(getApplicationContext(), "Enter email address!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
-    private void initListeners() {
-        register.setOnClickListener(this);
-        login.setOnClickListener(this);
-    }
+                if (TextUtils.isEmpty(password)) {
+                    Toast.makeText(getApplicationContext(), "Enter password!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
-    private void initObjects() {
-        inputValidation = new InputValidation(activity);
-        databaseHelper = new DatabaseHelper(activity);
-        user = new User();
-    }
+                if (password.length() < 6) {
+                    Toast.makeText(getApplicationContext(), "Password too short, enter minimum 6 characters!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
+                firebaseAuth.createUserWithEmailAndPassword(email, password)
+                        .addOnCompleteListener(Register.this, new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                Toast.makeText(Register.this, "Registration is successfully", Toast.LENGTH_SHORT).show();
+                                if (!task.isSuccessful()) {
+                                    Toast.makeText(Register.this, "Authentication failed." + task.getException(),
+                                            Toast.LENGTH_SHORT).show();
+                                } else {
+                                    startActivity(new Intent(Register.this, Login.class));
+                                    finish();
+                                }
+                            }
+                        });
 
-            case R.id.register:
-                postDataToSQLite();
-                break;
+            }
+        });
 
-            case R.id.login:
+
+        textViewLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 finish();
-                break;
-        }
-    }
-
-    private void postDataToSQLite() {
-        if (!inputValidation.isInputEditTextFilled(nama, JudulNama, getString(R.string.error_message_name))) {
-            return;
-        }
-        if (!inputValidation.isInputEditTextFilled(Email, jdlEmail, getString(R.string.error_message_email))) {
-            return;
-        }
-        if (!inputValidation.isInputEditTextEmail(Email, jdlEmail, getString(R.string.error_message_email))) {
-            return;
-        }
-        if (!inputValidation.isInputEditTextFilled(Pass, jdlPassword, getString(R.string.error_message_password))) {
-            return;
-        }
-        if (!inputValidation.isInputEditTextMatches(Pass, ComformPassword,
-                jdlComfirm, getString(R.string.error_password_match))) {
-            return;
-        }
-
-        if (!databaseHelper.checkUser(Email.getText().toString().trim())) {
-
-            user.setName(nama.getText().toString().trim());
-            user.setEmail(Email.getText().toString().trim());
-            user.setPassword(Pass.getText().toString().trim());
-
-            databaseHelper.addUser(user);
-
-            // Snack Bar to show success message that record saved successfully
-            Toast.makeText(getApplicationContext(), "YOUR REGISTRATION IS SUCCESSFULLY", Toast.LENGTH_LONG).show();
-            emptyInputEditText();
-            Intent intent5 = new Intent(Register.this, Login.class);
-            startActivity(intent5);
-
-
-        } else {
-            Toast.makeText(getApplicationContext(), "Email Already Exist", Toast.LENGTH_LONG).show();
-        }
-    }
-
-    private void emptyInputEditText() {
-        nama.setText(null);
-        Email.setText(null);
-        Pass.setText(null);
-        ComformPassword.setText(null);
+            }
+        });
     }
 }
