@@ -1,9 +1,8 @@
 package com.example.mamamsehat;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -30,7 +29,7 @@ public class Home extends AppCompatActivity {
                 startActivity(intent);
                 return true;
             case R.id.action_produk:
-                Intent intent1 = new Intent(Home.this, OrderActivity.class);
+                Intent intent1 = new Intent(Home.this, MainActivity.class);
                 startActivity(intent1);
                 return true;
             case R.id.action_artikel:
@@ -54,4 +53,6 @@ public class Home extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
+
+
 }
