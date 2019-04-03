@@ -1,27 +1,10 @@
 <resources>
     <string name="app_name">Mamam Sehat</string>
-    <string name="text_accounts">All Accounts</string>
-    <string name="hint_name">Name</string>
-    <string name="hint_email">Email</string>
-    <string name="hint_password">Password</string>
-    <string name="hint_confirm_password">Confirm Password</string>
-    <string name="text_login">Login</string>
-    <string name="text_register">Register</string>
-    <string name="error_message_name">Enter Full Name</string>
-    <string name="error_message_email">Enter Valid Email</string>
-    <string name="error_message_age">Enter Age</string>
-    <string name="error_message_password">Enter Password</string>
-    <string name="success_message">Registration Successful</string>
-    <string name="text_not_member">No account yet? Create one</string>
-    <string name="text_already_member">Already a member? Login</string>
-    <string name="error_email_exists">Email Already Exists</string>
-    <string name="error_password_match">Password Does Not Matches</string>
-    <string name="error_valid_email_password">Wrong Email or Password</string>
     <string name="text_hello">Hello</string>
     <string name="text_title">MAMAM SEHAT</string>
-    <string name="mamam_sehat_perusahaan_yang_bergerak_di_bidang_kuliner_dengan_produk_makanan_sehat_merupakan_gagasan_ide_model_bisnis_pola_hidup_sehat_yang_dikemas_secara_menarik_oleh_tim_mamamsehat">mamam_sehat_perusahaan_yang_bergerak_di_bidang_kuliner_dengan_produk_makanan_sehat_merupakan_gagasan_ide_model_bisnis_pola_hidup_sehat_yang_dikemas_secara_menarik_oleh_tim_mamamsehat</string>
+    <string name="desc">mamam_sehat_perusahaan_yang_bergerak_di_bidang_kuliner_dengan_produk_makanan_sehat_merupakan_gagasan_ide_model_bisnis_pola_hidup_sehat_yang_dikemas_secara_menarik_oleh_tim_mamamsehat</string>
     <string name="tentang_kami">Tentang Kami</string>
-    <string name="title_activity_order">OrderActivity</string>
+    <string name="title_activity_order">ORDER MAMAM SEHAT</string>
     <string name="intro_text">Menu Makanan</string>
     <string name="donuts">Mamam Sehat1
         Rp40.000,00</string>
@@ -82,15 +65,18 @@
         <item>@drawable/mediteranian</item>
     </array>
 
-    <string name="article_title">Apa Itu Hidup Sehat?</string>
+    <string name="registration_success">Registrasi Sukses</string>
+    <string name="min_pass">Password terlalu pendek, masukan min 6 karakter!</string>
+    <string name="auth_failed">Autentikasi Berhasil</string>
 
-    <string name="article_text"> Kesehatan adalah harta yang tak ternilai harganya. Oleh karena itu untuk tetap sehat orang rela melakukan apa saja. Segala cara yang dilakukan baik yang bernilai medis maupun non medis, dari yang logis hingga yang bernuansa supernatural adalah beragam usaha yang dilakukan oleh banyak orang dari berbagai kalangan untuk senantiasa sehat atau mendapatkan kembali kesehatannya.
-\n\n
- Tak jarang cara yang dilakukan menghabiskan banyak biaya dan bahkan juga tak jarang menabrak aneka norma dan logika. Tetapi sebenarnya menjaga diri untuk tetap sehat tidaklah sulit, bahkan juga kadangkala tidak memerlukan biaya sama sekali. Tetapi tentunya butuh ekstra kesabaran dan ketelatenan yang hanya sedikit orang bisa untuk tetap konsisten menjalani. Berikut kami sajikan 45 cara hidup sehat yang dapat dijadikan rujukan untuk tetap sehat dan senantiasa bahagia dalam menjalani hidup. Berikut paparannya.
-\n\n
-<b>1. Perbanyak konsumsi air putih:</b>
-\n\n
-<b><i>Tahukah Anda bahwa sebagian besar dari kita sebenarnya seringkali kurang minum cukup air setiap hari? Ini tentu hal yang tidak baik sebab seperti kita ketahui air sangat penting bagi tubuh kita. Ini karena kita kehilangan air setiap hari melalui urine, buang air besar, keringat dan pernapasan, sehingga kita perlu mengisi asupan air kita. Sebuah penelitian menunjukkan jumlah air yang kita butuhkan adalah tergantung pada berbagai faktor.
+    <string name="edittext_uri">http://developer.android.com</string>
+    <string name="button_uri">Open Website</string>
 
-Seperti kondisi iklim dan cuaca, aktivitas fisik yang kita lakukan, dan berat badan, tetapi umumnya kita perlu 2,7-3,7 liter asupan air. Jika muncul tanda2 seperti misalnya; urine berwarna atau agak kuning, bibir kering, mulut kering dan sedikit buang air kecil. Segeralah minum air karena itu tanda-tanda yang muncul karena tubuh mulai kekurangan cairan.\n\n
+    <string name="edittext_loc">Golden Gate Bridge</string>
+    <string name="button_loc">Open Location</string>
 
+    <string name="edittext_share">\'Twas brillig and the slithy toves</string>
+    <string name="button_share">Share This Text</string>
+    <string name="share_text_with">Share this text with:</string>
+
+</resources>

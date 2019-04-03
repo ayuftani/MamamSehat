@@ -1,0 +1,35 @@
+{
+  "project_info": {
+    "project_number": "820864268176",
+    "firebase_url": "https://mamamsehat-6488c.firebaseio.com",
+    "project_id": "mamamsehat-6488c",
+    "storage_bucket": "mamamsehat-6488c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:820864268176:android:18c019e947981735",
+        "android_client_info": {
+          "package_name": "com.example.mamamsehat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjmt5v4WV1E5mJAukOr3k0ZR5co8Wf9tQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "820864268176-g0pv1dtb30p4bmpu2923gau7173mv855.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
