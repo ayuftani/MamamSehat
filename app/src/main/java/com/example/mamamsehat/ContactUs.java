@@ -10,38 +10,32 @@ import android.support.v4.app.ShareCompat;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 public class ContactUs extends AppCompatActivity {
 
-    private EditText mWebsiteEditText;
-    private EditText mLocationEditText;
-    private EditText mShareTextEditText;
+    private ImageView wa;
+    private ImageView email;
+    private ImageView ig;
+    private ImageView maps;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_us);
 
-        mWebsiteEditText = findViewById(R.id.website_edittext);
-        mLocationEditText = findViewById(R.id.location_edittext);
-        mShareTextEditText = findViewById(R.id.share_edittext);
+        wa = findViewById(R.id.wa);
+        email = findViewById(R.id.email);
+        ig = findViewById(R.id.ig);
+        maps = findViewById(R.id.maps);
+
     }
 
-    public void openWebsite(View view) {
-        String url = mWebsiteEditText.getText().toString();
 
-        Uri webpage = Uri.parse(url);
-        Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
+    public void maps(View view) {
 
-        if (intent.resolveActivity(getPackageManager()) != null) {
-            startActivity(intent);
-        } else {
-            Log.d("ImplicitIntents", "Can't handle this!");
-        }
-    }
-
-    public void openLocation(View view) {
-        String loc = mLocationEditText.getText().toString();
+        String loc = "Telkom University";
 
         Uri addressUri = Uri.parse("geo:0,0?q=" + loc);
         Intent intent = new Intent(Intent.ACTION_VIEW, addressUri);
@@ -49,19 +43,8 @@ public class ContactUs extends AppCompatActivity {
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
         } else {
-            Log.d("ImplicitIntents", "Can't handle this intent!");
+            Log.d("Google Maps", "Can't handle this intent!");
         }
-    }
-
-    public void shareText(View view) {
-        String txt = mShareTextEditText.getText().toString();
-        String mimeType = "text/plain";
-        ShareCompat.IntentBuilder
-                .from(this)
-                .setType(mimeType)
-                .setChooserTitle(R.string.share_text_with)
-                .setText(txt)
-                .startChooser();
     }
 
     @Override
@@ -101,5 +84,21 @@ public class ContactUs extends AppCompatActivity {
 
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    public void ig(View view) {
+        String url = "www.instagam.com/mamam_sehat";
+
+        Uri webpage = Uri.parse(url);
+        Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
+
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        } else {
+            Log.d("Instagram", "Can't handle this!");
+        }
+    }
+
+    public void whatsapp(View view) {
     }
 }
