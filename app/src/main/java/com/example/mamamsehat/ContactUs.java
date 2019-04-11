@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class ContactUs extends AppCompatActivity {
 
@@ -18,6 +19,9 @@ public class ContactUs extends AppCompatActivity {
     private ImageView email;
     private ImageView ig;
     private ImageView maps;
+    private TextView website_edittext;
+    private TextView teext;
+    private TextView mail;
 
 
     @Override
@@ -29,6 +33,9 @@ public class ContactUs extends AppCompatActivity {
         email = findViewById(R.id.email);
         ig = findViewById(R.id.ig);
         maps = findViewById(R.id.maps);
+        website_edittext = findViewById(R.id.website_edittext);
+        teext = findViewById(R.id.textView2);
+        mail = findViewById(R.id.textView13);
 
     }
 
@@ -87,18 +94,35 @@ public class ContactUs extends AppCompatActivity {
     }
 
     public void ig(View view) {
-        String url = "www.instagam.com/mamam_sehat";
-
-        Uri webpage = Uri.parse(url);
-        Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
-
-        if (intent.resolveActivity(getPackageManager()) != null) {
-            startActivity(intent);
-        } else {
-            Log.d("Instagram", "Can't handle this!");
-        }
+        String txt = website_edittext.getText().toString();
+        String mimeType = "text/plain";
+        ShareCompat.IntentBuilder
+                .from(this)
+                .setType(mimeType)
+                .setChooserTitle(R.string.share_text_with)
+                .setText(txt)
+                .startChooser();
     }
 
     public void whatsapp(View view) {
+        String txt = mail.getText().toString();
+        String mimeType = "text/plain";
+        ShareCompat.IntentBuilder
+                .from(this)
+                .setType(mimeType)
+                .setChooserTitle(R.string.share_text_with)
+                .setText(txt)
+                .startChooser();
     }
-}
+
+    public void email(View view) {
+        String txt = teext.getText().toString();
+        String mimeType = "text/plain";
+        ShareCompat.IntentBuilder
+                .from(this)
+                .setType(mimeType)
+                .setChooserTitle(R.string.share_text_with)
+                .setText(txt)
+                .startChooser();
+    }
+    }
