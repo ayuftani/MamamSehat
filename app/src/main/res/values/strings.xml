@@ -2,16 +2,18 @@
     <string name="app_name">Mamam Sehat</string>
     <string name="text_hello">Hello</string>
     <string name="text_title">MAMAM SEHAT</string>
-    <string name="desc">mamam_sehat_perusahaan_yang_bergerak_di_bidang_kuliner_dengan_produk_makanan_sehat_merupakan_gagasan_ide_model_bisnis_pola_hidup_sehat_yang_dikemas_secara_menarik_oleh_tim_mamamsehat</string>
     <string name="tentang_kami">Tentang Kami</string>
     <string name="title_activity_order">ORDER MAMAM SEHAT</string>
     <string name="intro_text">Menu Makanan</string>
     <string name="donuts">Mamam Sehat1
-        Rp40.000,00</string>
+        Rp40.000,00
+    </string>
     <string name="ice_cream_sandwiches">Menu sehat2
-        Rp45.000,00</string>
+        Rp45.000,00
+    </string>
     <string name="froyo">Mamam Sehat3
-        Rp47.000,00</string>
+        Rp47.000,00
+    </string>
     <string name="donut_order_message">You ordered Mamam Sehat1.</string>
     <string name="ice_cream_order_message">You ordered Mamam Sehat2.</string>
     <string name="froyo_order_message">You ordered Mamam Sehat3.</string>
@@ -22,23 +24,18 @@
 
     <string name="action_beranda">Beranda</string>
     <string name="action_produk">Produk</string>
+    <string name="action_tambahartikel">Tambah Artikel</string>
+    <string name="action_tambahproduk">Tambah Produk</string>
     <string name="action_artikel">Artikel</string>
     <string name="action_forum">Forum</string>
     <string name="action_contact">Hubungi Kami</string>
     <string name="action_logout">Logout</string>
-
-    <string name="alasan">Adapun cara hidup sehat diantaranya: \n
-        Berolahraga \n
-        Menjaga Pola Makan \n
-        Kurangi Asupan garam dan gula \n
-        Minum Air putih dengan teratur \n
-        Menciptakan lingkungan yang sehat \n
-        Istirahat yang cukup</string>
+    <string name="action_loginadmin">ADMIN</string>
 
     <string name="title_placeholder">Title</string>
     <string name="news_placeholder">News</string>
     <string name="sports_info_placeholder">Here is some news</string>
-    <string name="subtitle_detail_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ultrices congue rutrum. Phasellus elementum ipsum ac convallis aliquam. Suspendisse eleifend eros a enim faucibus mollis. Nunc placerat, est vitae vestibulum blandit, dolor diam fringilla tellus, eu euismod mauris neque at neque.</string>
+    <string name="subtitle_detail_text">Ayo Diet</string>
     <string name="buttonOk">OK</string>
 
     <string-array name="Produk_titles">
@@ -67,7 +64,7 @@
 
     <string name="registration_success">Registrasi Sukses</string>
     <string name="min_pass">Password terlalu pendek, masukan min 6 karakter!</string>
-    <string name="auth_failed">Autentikasi Berhasil</string>
+    <string name="auth_failed">Autentikasi gagal</string>
 
     <string name="edittext_uri">http://developer.android.com</string>
     <string name="button_uri">Open Website</string>
