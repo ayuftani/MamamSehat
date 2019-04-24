@@ -91,6 +91,7 @@ public class MainActivity extends AppCompatActivity
                 return true;
             case R.id.nav_contact:
                 drawer.closeDrawer(GravityCompat.START);
+                startActivity(new Intent(getApplicationContext(), Kontak.class));
                 displayToast(getString(R.string.chose_tools));
                 return true;
             default:
