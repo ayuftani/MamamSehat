@@ -78,9 +78,11 @@ public class MainActivity extends AppCompatActivity
         switch (item.getItemId()) {
             case R.id.nav_profile:
                 drawer.closeDrawer(GravityCompat.START);
+                startActivity(new Intent(getApplicationContext(), Profile.class));
                 return true;
             case R.id.nav_menu:
                 drawer.closeDrawer(GravityCompat.START);
+                startActivity(new Intent(getApplicationContext(), MenuActivity.class));
                 displayToast(getString(R.string.chose_gallery));
                 return true;
             case R.id.nav_book:

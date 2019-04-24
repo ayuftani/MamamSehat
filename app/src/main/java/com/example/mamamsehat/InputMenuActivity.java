@@ -118,7 +118,8 @@ public class InputMenuActivity extends AppCompatActivity {
                     public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                         loading_bar.setVisibility(View.GONE);
                         // Get a URL to the uploaded content
-                        Uri downloadUrl = taskSnapshot.getDownloadUrl();
+//                        Uri downloadUrl = taskSnapshot.getDownloadUrl();
+                        Uri downloadUrl = taskSnapshot.getUploadSessionUri();
 
 
                         String getDownloadUrl = downloadUrl.toString();
