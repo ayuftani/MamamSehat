@@ -1,83 +1,28 @@
 <resources>
-    <string name="app_name">Mamam Sehat</string>
-    <string name="text_hello">Hello</string>
-    <string name="text_title">MAMAM SEHAT</string>
-    <string name="desc">mamam_sehat_perusahaan_yang_bergerak_di_bidang_kuliner_dengan_produk_makanan_sehat_merupakan_gagasan_ide_model_bisnis_pola_hidup_sehat_yang_dikemas_secara_menarik_oleh_tim_mamamsehat</string>
-    <string name="tentang_kami">Tentang Kami</string>
-    <string name="title_activity_order">ORDER MAMAM SEHAT</string>
-    <string name="intro_text">Menu Makanan</string>
-    <string name="donuts">Mamam Sehat1
-        Rp40.000,00</string>
-    <string name="ice_cream_sandwiches">Menu sehat2
-        Rp45.000,00</string>
-    <string name="froyo">Mamam Sehat3
-        Rp47.000,00</string>
-    <string name="donut_order_message">You ordered Mamam Sehat1.</string>
-    <string name="ice_cream_order_message">You ordered Mamam Sehat2.</string>
-    <string name="froyo_order_message">You ordered Mamam Sehat3.</string>
-    <string name="change_dessert">Change dessert</string>
-    <string name="article_title">Apa itu Hidup Sehat</string>
-    <string name="article_subtitle">Manfaat Pola Hidup Sehat Bagi Kesehatan Masyarakat Indonesia</string>
+    <string name="app_name">MS</string>
+    <string name="title_activity_splash">SplashActivity</string>
 
 
-    <string name="action_beranda">Beranda</string>
-    <string name="action_produk">Produk</string>
-    <string name="action_artikel">Artikel</string>
-    <string name="action_forum">Forum</string>
-    <string name="action_contact">Hubungi Kami</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
     <string name="action_logout">Logout</string>
+    <string name="my_app_title">Selamat datang</string>
+    <string name="hello_world">Hello World!</string>
 
-    <string name="alasan">Adapun cara hidup sehat diantaranya: \n
-        Berolahraga \n
-        Menjaga Pola Makan \n
-        Kurangi Asupan garam dan gula \n
-        Minum Air putih dengan teratur \n
-        Menciptakan lingkungan yang sehat \n
-        Istirahat yang cukup</string>
+    <string name="profile">Profile</string>
+    <string name="menu">Menu</string>
+    <string name="artikel">Artikel</string>
+    <string name="contact">Hubungi Kami</string>
 
-    <string name="title_placeholder">Title</string>
-    <string name="news_placeholder">News</string>
-    <string name="sports_info_placeholder">Here is some news</string>
-    <string name="subtitle_detail_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ultrices congue rutrum. Phasellus elementum ipsum ac convallis aliquam. Suspendisse eleifend eros a enim faucibus mollis. Nunc placerat, est vitae vestibulum blandit, dolor diam fringilla tellus, eu euismod mauris neque at neque.</string>
-    <string name="buttonOk">OK</string>
+    <string name="chose_gallery">You chose the Menu</string>
+    <string name="chose_slideshow">You chose Aticle</string>
+    <string name="chose_tools">You chose Contact</string>
 
-    <string-array name="Produk_titles">
-        <item>Diet Ketogenik</item>
-        <item>Diet Paleo</item>
-        <item>Diet Mayo</item>
-        <item>Diet Vegetarian</item>
-        <item>Diet Mediteranian</item>
-    </string-array>
+    <string name="addmenu">Tambah Menu</string>
+    <string name="addartikel">Tambah Artikel</string>
+    <string name="manage">Pengaturan</string>
 
-    <string-array name="Produk_info">
-        <item>Tentang Diet Ketogenik!</item>
-        <item>Tentang Diet Paleo!</item>
-        <item>Tentang Diet Mayo!</item>
-        <item>Tentang Diet Vegetarian!</item>
-        <item>Tentang Diet Mediteranian!</item>
-    </string-array>
-
-    <array name="Produk_images">
-        <item>@drawable/keto</item>
-        <item>@drawable/paleo</item>
-        <item>@drawable/mayo</item>
-        <item>@drawable/vegetarian</item>
-        <item>@drawable/mediteranian</item>
-    </array>
-
-    <string name="registration_success">Registrasi Sukses</string>
-    <string name="min_pass">Password terlalu pendek, masukan min 6 karakter!</string>
-    <string name="auth_failed">Autentikasi Berhasil</string>
-
-    <string name="edittext_uri">http://developer.android.com</string>
-    <string name="button_uri">Open Website</string>
-
-    <string name="edittext_loc">Golden Gate Bridge</string>
-    <string name="button_loc">Open Location</string>
-
-    <string name="edittext_share">\'Twas brillig and the slithy toves</string>
-    <string name="button_share">Share This Text</string>
-    <string name="share_text_with">Share this text with:</string>
-    <string name="edittext">www.instagram.com/@mamam.sehat</string>
-
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
