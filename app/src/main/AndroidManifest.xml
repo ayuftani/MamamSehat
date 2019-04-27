@@ -15,7 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".OnboardingActivity"></activity>
+        <activity android:name=".usermenu"></activity>
+        <activity android:name=".OnboardingActivity" />
         <activity android:name=".kalkulasi" />
         <activity
             android:name=".Settings"
