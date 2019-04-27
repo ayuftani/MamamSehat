@@ -1,9 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".kalkulasi">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="407dp"
+        android:layout_height="305dp">
+
+        <ImageView
+            android:layout_width="407dp"
+            android:layout_height="230dp" />
+
+        <TextView
+            android:layout_width="395dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="232dp"
+            android:layout_marginLeft="-398dp"
+            android:text="JUDUL"
+            android:textStyle="bold"
+            android:textSize="30dp"/>
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="257dp"
+            android:layout_marginLeft="-398dp"
+            android:text="Rp."
+            android:textStyle="bold"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="348dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="257dp"
+            android:text="99.999"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_marginLeft="3dp"/>
+
+    </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="407dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="310dp"
+        android:layout_marginLeft="-407dp">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="390dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/green"
+            android:text="BELI"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.17"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.975" />
+    </android.support.constraint.ConstraintLayout>
+</LinearLayout>
