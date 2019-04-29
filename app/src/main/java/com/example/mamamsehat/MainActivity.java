@@ -88,6 +88,7 @@ public class MainActivity extends AppCompatActivity
                 return true;
             case R.id.nav_book:
                 drawer.closeDrawer(GravityCompat.START);
+                startActivity(new Intent(getApplicationContext(), Artikel.class));
                 displayToast(getString(R.string.chose_slideshow));
                 return true;
             case R.id.nav_contact:
