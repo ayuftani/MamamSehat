@@ -15,7 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".usermenu"></activity>
+        <activity android:name=".setmain"></activity>
+        <activity android:name=".usermenu" />
         <activity android:name=".OnboardingActivity" />
         <activity android:name=".kalkulasi" />
         <activity
@@ -23,7 +24,7 @@
             android:label="@string/title_activity_settings"
             android:theme="@style/AppTheme.NoActionBar.NoActionBar" />
         <activity android:name=".Profile" />
-        <activity android:name=".Artikel"></activity>
+        <activity android:name=".Artikel" />
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
