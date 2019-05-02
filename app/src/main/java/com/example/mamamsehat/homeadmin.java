@@ -64,7 +64,7 @@ public class homeadmin extends AppCompatActivity implements  View.OnClickListene
                 break;
 
             case R.id.artikel :
-                Intent intent2 = new Intent(this, homeadmin.class);
+                Intent intent2 = new Intent(this, InputArtikelActivity.class);
                 startActivity(intent2);
                 break;
 
